@@ -1,8 +1,7 @@
 ---
 title: {{ replace .Name "-" " " | title }}
-date: {{ now.Format "2006-01-2" }}
 tags: [tag1, tag2]
-image: "/image/blog-pic.jpg"
+image: "/images/blog-pic.jpg"
 description: "A smalll description"
 showDate: true/false    # to enable/disable showing dates
 math: true              # to enable showing equations (katex)

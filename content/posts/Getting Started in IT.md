@@ -3,7 +3,7 @@ title: "Getting Started in IT"
 tags: [IT, Beginner's Guide]
 image: "/images/blog-pic.jpg"
 description: "Getting Started in IT: A Beginner's Guide"
-showDate: false    # to enable/disable showing dates
+showDate: true    # to enable/disable showing dates
 math: false              # to enable showing equations (katex)
 chordsheet: true       # to add chordsheet styelsheet
 ---

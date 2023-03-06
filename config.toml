@@ -47,8 +47,11 @@ enableemoji = false
                 name = "All Posts"
                 url = "/posts/"
                 weight = 2
-    
+    [[menu.main]]
+        name = "Notes"
+        url = "/notes"
+        weight = 3
     [[menu.main]]
         name = "Author"
         url = "https://armoghan-ul-mohmin.github.io/Portfolio/"
-        weight = 3
+        weight = 4
