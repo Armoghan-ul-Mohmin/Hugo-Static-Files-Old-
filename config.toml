@@ -40,7 +40,6 @@ disqusShortname = ""
         name = "Blog"
         weight = 2
             [[menu.main]]
-                parent = "blog"
                 name = "Posts"
                 url = "/posts/"
                 weight = 1

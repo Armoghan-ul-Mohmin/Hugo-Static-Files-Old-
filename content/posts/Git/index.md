@@ -6,6 +6,10 @@ image: Git.webp
 description: "Introduction to Git"
 math: false              # to enable showing equations (katex)
 mermaid: false           # to add diagrams using mermaid
+tableOfContents:
+    startLevel: 1
+    ordered: false
+    endLevel: 3
 ---
 
 Git is officially defined as a *distributed version control system* (VCS).
@@ -16,8 +20,10 @@ Basically, it's a massively popular tool for coordinating parallel work and mana
 
 ℹ️ Git official homepage: [https://git-scm.com/](https://git-scm.com/)
 
+{{< toc >}}
+<br>
 
-# 1. Setup instructions
+## 1. Setup instructions
 
 Git is primarily used via the command-line interface, which we can access with our system terminals.
 
@@ -52,7 +58,7 @@ git config --global user.email "your@email.com"
 
 Replace the values inside the quotes with your name and email address.
 
-# 2. Repositories
+## 2. Repositories
 
 When working with Git, it's important to be familiar with the term **repository**. A Git repository is a container for a project that is tracked by Git.  
 
@@ -63,7 +69,7 @@ We can single out two major types of Git repositories:
 
 In this video, we'll only work with local repositories.
 
-# 3. Initializing a repository
+## 3. Initializing a repository
 
 To create a new repository and start tracking your project with Git, use your terminal software and navigate to the main folder of your project, then type the following command:
 
@@ -73,7 +79,7 @@ git init
 
 This command will generate a hidden **.git** directory for your project, where Git stores all internal tracking data for the current repository.
 
-# 4. Staging and committing code
+## 4. Staging and committing code
 
 Committing is the process in which the changes are *'officially'* added to the Git repository.
 
@@ -83,7 +89,7 @@ Commits are usually created at logical points as we develop our project, usually
 
 📌 Before we can commit our code, we need to place it inside the **staging area**.
 
-## 4.1. Checking the status
+### 4.1. Checking the status
 
 While located inside the project folder in our terminal, we can type the following command to check the status of our repository:
 
@@ -121,7 +127,7 @@ git add .
 
 By default, this adds **all the files and folders** inside the project folder to the staging area, from where they are ready to be committed and tracked.  
 
-## 4.3. Making commits
+### 4.3. Making commits
 
  A **commit** is a snapshot of our code at a particular time, which we are saving to the commit history of our repository. After adding all the files that we want to track to the staging area with the `**git add`** command, we are ready to make a commit.
 
@@ -139,7 +145,7 @@ After executing that command, you will get the technical details about the commi
 
 📌 To create a new commit, you will need to repeat the process of adding files to the staging area and then committing them after. Again, it's very useful to use the **git status** command to see which files were modified, staged, or untracked.
 
-## 4.4. Commit history
+### 4.4. Commit history
 
 To see all the commits that were made for our project, you can use the following command:
 
@@ -163,7 +169,7 @@ To go back to the latest commit (the newest version of our project code), you ca
 git checkout master
 ```
 
-## 4.5. Ignoring files
+### 4.5. Ignoring files
 
 To ignore files that you don't want to be tracked or added to the staging area, you can create a file called `.gitignore` in your main project folder.
 
@@ -171,7 +177,7 @@ Inside of that file, you can list all the file and folder names that you definit
 
 You can read an article about ignoring files [on this link](https://help.github.com/en/articles/ignoring-files).
 
-# 5. Branches
+## 5. Branches
 
 A **branch** could be interpreted as an individual timeline of our project commits.
 
@@ -181,7 +187,7 @@ That allows us to add new (experimental, unfinished, and potentially buggy) feat
 
 When we initialize a repository and start making commits, they are saved to the **master** branch by default.
 
-## 5.1. Creating a new branch
+### 5.1. Creating a new branch
 
 You can create a new branch using the following command:
 
@@ -193,7 +199,7 @@ The new branch that gets created will be the reference to the current state of y
 
 📌 It's a good idea to create a **development** branch where you can work on improving your code, adding new experimental features, and similar. After development and testing these new features to make sure they don't have any bugs and that they can be used, you can merge them to the master branch.
 
-## 5.2. Changing branches
+### 5.2. Changing branches
 
 To switch to a different branch, you use the **git checkout** command:
 
@@ -219,7 +225,7 @@ To go back to the **master** branch, use this command:
 git checkout master
 ```
 
-## 5.3. Merging branches
+### 5.3. Merging branches
 
 You can merge branches in situations where you want to implement the code changes that you made in an individual branch to a different branch.
 
@@ -233,7 +239,7 @@ git merge <branch-name>
 
 You would replace `<branch-name>` with the branch that you want to integrate into your current branch.
 
-## 5.4. Deleting a branch
+### 5.4. Deleting a branch
 
 To delete a branch, you can run the **git branch** command with the **-d** flag:
 
@@ -243,7 +249,7 @@ git branch -d <branch-name>
 
 ℹ️ Read more about branching and merging [on this link](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging).
 
-# 6. Further learning
+## 6. Further learning
 
 To learn more about Git, make sure to check the following resources:
 
