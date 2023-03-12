@@ -37,7 +37,11 @@
                     <img id="cover-image" src={{ $image.RelPermalink }} alt="{{ $.Title }}">
                 </figure>
                 {{ end }}
-
+                 
+                <h2> Table Of Contents</h2> 
+                <br>
+                {{ .TableOfContents }}
+                <br>
                 {{ .Content }}
                 {{ partial "social-media-share.html" . }}
 
