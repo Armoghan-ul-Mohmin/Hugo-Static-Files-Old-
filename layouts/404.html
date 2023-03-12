@@ -1,32 +1,45 @@
 {{ define "main" }}
 
-<!-- is-fullheight-with-navbar is-bold is-light -->
-<section class="hero has-text-centered">
-    <div class="hero-body">
-        <div class="container">
-            <h1 class="title is-1">
-                404! Page not found...
-            </h1>
-            <br><br>
-            <img src="https://th.bing.com/th/id/R.d40a6837540e4c6e5c93015e130af277?rik=EB3BMMQRuoWCXA&pid=ImgRaw&r=0" alt="404">
-            <h1 class="subtitle is-4">
-                Here's what may have happened:
-            </h1>
-            <h1 class="subtitle is-6">
-                1. The page was moved to another location. You can search for it above.
-            </h1>
-            <h1 class="subtitle is-6">
-                2. The page was removed. You can read another one from below.
-            </h1>
-            <h1 class="subtitle is-6">
-                3. This page never existed
-            </h1>
+<div class="container">
+
+    {{ partial "ads.html" "ads/horizontal-ad.js" }}
+
+    <div class="text-center">
+        <h1 class="p-5" style="font-size: 9rem;">
+            404
+        </h1>
+
+        <div style="font-size:1.2rem">
+            <p>
+                Maybe this page moved?
+            </p>
+            <p>
+                Maybe it didn't exist in the first place?
+            </p>
+            <p>
+                Maybe it was deleted?
+            </p>
         </div>
     </div>
-</section>
+</div>
 
-<!-- {{- partial "index/tag-bullet.html" . -}}
-{{- partial "index/section-bullet.html" . -}}
-{{- partial "index/list-blog-brief.html" . -}} -->
+<br>
+
+<div class="bg-offwhite py-5">
+    <div class="container-md">
+        <div class="row">
+            {{/* $filteredPosts := where (where .Site.Pages "Type" "blog") "UniqueID" "!= ".UniqueID }}
+            {{ $relatedPosts := shuffle $filteredPosts | first 3 */}}
+
+            {{ $allPosts := where .Site.RegularPages ".Section" "in" (slice "posts" "sections") }}
+            {{ $randomPosts := shuffle $allPosts | first 6 }}
+            {{ $randomPosts := $randomPosts.ByDate.Reverse }}
+
+            {{ range $randomPosts }}
+            {{ partial "suggestion.html" . }}
+            {{ end }}
+        </div>
+    </div>
+</div>
 
 {{ end }}

@@ -1,6 +1,6 @@
 # add your custom gitignore here:
 !.gitignore
 !.gitsubmodules
-!.hugo_build.lock
-public/**
 .hugo_build.lock
+themes/*
+public/*

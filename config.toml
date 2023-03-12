@@ -1,32 +1,34 @@
-baseURL = "https://armoghan-ul-mohmin.github.io/Blogs/"
-CanonifyURLs=true
-
-languageCode = "en-us"
-
-
-title = "Armoghan"
-disqusShortname = "disqus-code"
-googleAnalytics = "analytics-code"
+baseURL = "https://armoghan-blogs.netlify.app/"
+canonifyURLs=true
 pluralizeListTitles = false
-enableemoji = false
+summaryLength   = 25
+
+languageCode  = "en-us"
+title         = "Armoghan"
+
+disqusShortname = ""
 
 [params]
-    description = "A description for the meta tag of the site"
-    # googleSearch = "google-search-code"
-    showDate = true # make false if dont want to show date for evergeen articles
-    math = false # best to enable this in the front matter of a page
+    description     = "The Ultimate Tech Blogging Theme"
+    contactEmail    = "Armoghan@proton.me"
+    footer          = ""
+    googleSearch    = "google-cse-key"
+    googleAnalytics = ""      # Google Analytics v4
+    adsense         = "adsense-key"
+    math            = false   # best to enable this in the front matter of a page
+    mermaid         = false   # best to enable this in the front matter of a page
 
-    tagsInHome = 0     # set zero to not show in home page
-    sectionsInHome = 0  # set zero to not show in home page
-    paginatePostsPerPage = 10
-    paginateTagsPerPage = 50
+    # Social Media Params
+    facebook   = "https://www.facebook.com/armoghanul.mohmin"
+    twitter    = "https://twitter.com/Armoghan12"
+    youtube    = ""
+    instagram  = "https://www.instagram.com/___armoghan/"
+    github     = "https://github.com/Armoghan-ul-Mohmin"
+    pinterest  = ""
+    linkedin   = "http://www.linkedin.com/in/armoghan-ul-mohmin-4289a9248"
 
-[taxonomies]
-    tag = "tags"
 
-[markup.goldmark.renderer]
-    unsafe = true
-
+# Configure the site menu here
 [menu]
     [[menu.main]]
         name = "Home"
@@ -35,23 +37,49 @@ enableemoji = false
 
     [[menu.main]]
         identifier = "blog"
-        name = "This Blog"
+        name = "Blog"
         weight = 2
             [[menu.main]]
                 parent = "blog"
-                name = "All Tags"
-                url = "/tags/"
+                name = "Posts"
+                url = "/posts/"
                 weight = 1
             [[menu.main]]
                 parent = "blog"
-                name = "All Posts"
-                url = "/posts/"
+                name = "Sections"
+                url = "/sections/"
                 weight = 2
-    [[menu.main]]
-        name = "Notes"
-        url = "/notes"
-        weight = 3
+            [[menu.main]]
+                parent = "blog"
+                name = "divider"
+                weight = 3
+            [[menu.main]]
+                parent = "blog"
+                name = "Tags"
+                url = "/tags/"
+                weight = 4
+            [[menu.main]]
+                parent = "blog"
+                name = "Cheat Sheets"
+                url = "/cheatsheets/"
+                weight = 5
     [[menu.main]]
         name = "Author"
         url = "https://armoghan-ul-mohmin.github.io/Portfolio/"
+        weight = 3
+    [[menu.main]]
+        name = "Contact"
+        url = "https://armoghan-ul-mohmin.github.io/Portfolio/Contact.html"
         weight = 4
+
+[markup.goldmark.parser.attribute]
+    block = true
+
+# Don't touch this
+[markup.goldmark.renderer]
+    unsafe = true
+
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = "0.91.2"

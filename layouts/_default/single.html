@@ -1,52 +1,64 @@
 {{ define "main" }}
 
-<div class="content blog">
-    <h1>{{ .Title | title }}</h1>
-
-    <div id="infobar" class="level is-mobile">
-        <div class="level-left">
-            {{ if or .Params.showDate .Site.Params.showDate }}
-            <div class="level-item">
-                <p class="subtitle info date">
-                    {{- .Date.Format "Jan 2, 2006" }}
-                </p>
+<main class="blog-content">
+    <div class="container-md">
+        <div class="row">
+            <!-- <div class="col-lg-8 offset-lg-2 px-lg-4"> -->
+            <div class="col-lg-2 d-none d-xl-block">
+                <div class="ad-left-offset"></div>
+                {{ partial "ads.html" "ads/vertical-ad.js"}}
             </div>
-            {{ end }}
 
-            <div class="level-item">
-                <p class="subtitle info">
-                    {{ partial "time-to-read.html" . }}
-                </p>
-            </div>
-        </div>
-        <div class="level-right is-hidden-touch">
-            <div class="tags">
-                {{ range .Params.tags }}
-                <a class="tag is-dark is-rounded" href="{{ "/tags/" | relURL }}{{ . | urlize }}">{{ . | title }}</a>
+            <div class="col-md-12 col-lg-8 px-lg-4">
+                {{ partial "ads.html" "ads/horizontal-ad.js" }}
+
+                <h1 class="title">{{ .Title }}</h1>
+
+                <div class="container-fluid px-0 mb-4">
+                    <div class="row align-items-end">
+                        <div class="col-md-4 date-time">
+                            {{ partial "date.html" .Date }}
+                            &centerdot;
+                            {{ partial "time-to-read.html" .}}
+                        </div>
+
+                        <div class="col-md-8 tags ">
+                            {{ range .Params.tags }}
+                            <a href="{{ " /tags/" | relURL }}{{ . | urlize }}"><span class="tag bg-dark">{{ .
+                                    }}</span></a>
+                            {{ end }}
+                        </div>
+                    </div>
+                </div>
+
+                {{ with .Page.Params.image }}
+                <figure>
+                    {{ $image := $.Page.Resources.GetMatch . }}
+                    <img id="cover-image" src={{ $image.RelPermalink }} alt="{{ $.Title }}">
+                </figure>
                 {{ end }}
+
+                {{ .Content }}
+                <!-- Posts Adds -->
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2047325115998150"
+                    data-ad-slot="1597964572" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+
+                {{ partial "social-media-share.html" . }}
+
+                {{ partial "ads.html" "ads/horizontal-ad.js" }}
+                <br>
+                {{ partial "disqus.html" . }}
+            </div>
+
+            <div class="col-lg-2 d-none d-xl-block">
+                <div class="ad-right-offset"></div>
+                {{ partial "ads.html" "ads/vertical-ad.js"}}
             </div>
         </div>
     </div>
-
-    <div class="tags is-hidden-desktop">
-        {{ range .Params.tags }}
-        <a class="tag is-dark is-rounded" href="{{ "/tags/" | relURL }}{{ . | urlize }}">{{ . | humanize }}</a>
-        {{ end }}
-    </div>
-
-    <div class="blog-text">
-        {{ with .Params.image }}
-        <figure>
-            <img src="{{ . | relURL }}">
-        </figure>
-        {{ end }}
-
-        {{ .Content }}
-    </div>
-</div>
-
-{{- partial "social-media-share.html" . -}}
-<br>
-{{ partial "disqus.html" . }}
+</main>
 
 {{ end }}

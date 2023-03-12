@@ -1,6 +1,8 @@
-{{ $time := math.Round (div (countwords .Content) 180.0) }}
-{{- if le $time 1 -}}
+<span class="time-to-read">
+    {{ $time := math.Round (div (countwords .Content) 180.0) }}
+    {{- if le $time 1 -}}
     1 min read
-{{- else -}}
+    {{- else -}}
     {{ $time }} mins read
-{{- end -}}
+    {{- end -}}
+</span>
