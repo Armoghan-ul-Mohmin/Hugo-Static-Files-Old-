@@ -1,9 +1,9 @@
 ---
 title: Install Git
 date: 2023-03-11
-tags: [Git, GitHub]
+tags: [Git, GitHub, Windows]
 image: git-logo.png
-description: "Introduction to Git"
+description: "Install Git on Windows"
 math: false              # to enable showing equations (katex)
 mermaid: false           # to add diagrams using mermaid
 ---
