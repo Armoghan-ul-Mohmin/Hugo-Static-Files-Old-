@@ -9,11 +9,11 @@ title         = "Armoghan"
 disqusShortname = ""
 
 [params]
-    description     = "The Ultimate Tech Blogging Theme"
+    description     = "My Tech Blogs"
     contactEmail    = "Armoghan@proton.me"
     footer          = ""
     googleSearch    = "google-cse-key"
-    googleAnalytics = ""      # Google Analytics v4
+    googleAnalytics = "G-X28GYK9J5J"      # Google Analytics v4
     adsense         = "pub-2047325115998150"
     math            = false   # best to enable this in the front matter of a page
     mermaid         = false   # best to enable this in the front matter of a page
