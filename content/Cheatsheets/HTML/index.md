@@ -11,7 +11,9 @@ tableOfContents:
     ordered: false
     endLevel: 3
 ---
-
+<br>
+<button type="button" class="btn btn-outline-success" onclick="window.location.href='HTML_Cheatsheet.pdf';">Download CheatSheet </button>
+<br>
 {{< toc >}}
 <br>
 
@@ -270,6 +272,4 @@ It is used to place content in the sidebar
 <aside> Your data </aside>
 ```
 
-## Download 
 
-<button type="button" class="btn btn-outline-success" onclick="window.location.href='HTML_Cheatsheet.pdf';">Download CheatSheet </button>
