@@ -6,13 +6,9 @@ summaryLength   = 25
 languageCode  = "en-us"
 title         = "Armoghan"
 
-disqusShortname = ""
-
 [params]
     description     = "My Tech Blogs"
     contactEmail    = "Armoghan@proton.me"
-    footer          = ""
-    googleSearch    = "google-cse-key"
     googleAnalytics = "G-X28GYK9J5J"      # Google Analytics v4
     adsense         = "pub-2047325115998150"
     math            = false   # best to enable this in the front matter of a page
@@ -24,7 +20,6 @@ disqusShortname = ""
     youtube    = ""
     instagram  = "https://www.instagram.com/___armoghan/"
     github     = "https://github.com/Armoghan-ul-Mohmin"
-    pinterest  = ""
     linkedin   = "http://www.linkedin.com/in/armoghan-ul-mohmin-4289a9248"
 
 
@@ -34,42 +29,26 @@ disqusShortname = ""
         name = "Home"
         url = "/"
         weight = 1
-
     [[menu.main]]
-        identifier = "blog"
-        name = "Blog"
+        name = "Posts"
+        url = "/posts/"
         weight = 2
-            [[menu.main]]
-                name = "Posts"
-                url = "/posts/"
-                weight = 1
-            [[menu.main]]
-                parent = "blog"
-                name = "Sections"
-                url = "/sections/"
-                weight = 2
-            [[menu.main]]
-                parent = "blog"
-                name = "divider"
-                weight = 3
-            [[menu.main]]
-                parent = "blog"
-                name = "Tags"
-                url = "/tags/"
-                weight = 4
-            [[menu.main]]
-                parent = "blog"
-                name = "Cheat Sheets"
-                url = "/cheatsheets/"
-                weight = 5
+    [[menu.main]]
+        name = "Tags"
+        url = "/tags/"
+        weight = 3
+    [[menu.main]]
+        name = "Cheat Sheets"
+        url = "/cheatsheets/"
+        weight = 4
     [[menu.main]]
         name = "Author"
         url = "https://armoghan-ul-mohmin.github.io/Portfolio/"
-        weight = 3
+        weight = 5
     [[menu.main]]
         name = "Contact"
         url = "https://armoghan-ul-mohmin.github.io/Portfolio/Contact.html"
-        weight = 4
+        weight = 6
 
 [markup.goldmark.parser.attribute]
     block = true
@@ -77,7 +56,7 @@ disqusShortname = ""
 # Don't touch this
 [markup.goldmark.renderer]
     unsafe = true
-
+    
 [module]
   [module.hugoVersion]
     extended = true
