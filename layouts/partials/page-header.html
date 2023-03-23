@@ -8,13 +8,14 @@
         </div>
 
         <div class="ra-toggler col-3 col-sm-4 d-block d-sm-none">
-          <button name="hamburgermenu" class="bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <button name="hamburgermenu" class="bg-dark" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarNav">
             <i class="fas fa-bars"></i>
           </button>
         </div>
 
         <div class="col-6 col-sm-4">
-          <h2 class="title"><a href="{{ "/" | relURL }}">{{ .Site.Title }}</a></h2>
+          <h2 class="title"><a href="{{ " /" | relURL }}">{{ .Site.Title }}</a></h2>
         </div>
       </div>
     </div>
@@ -40,9 +41,9 @@
             <div class="dropdown-menu">
               {{ range .Children }}
               {{ if eq .Name "divider" }}
-                <div class="dropdown-divider"></div>
+              <div class="dropdown-divider"></div>
               {{ else }}
-                <a class="dropdown-item" href="{{ .URL }}">{{ .Name }}</a>
+              <a class="dropdown-item" href="{{ .URL }}">{{ .Name }}</a>
               {{ end }}
               {{ end }}
             </div>
@@ -53,25 +54,13 @@
               {{ if eq .URL $.RelPermalink }}
               active {{ $.RelPermalink }}
               {{ end }}
-              " 
-              href="{{ .URL }}">
+              " href="{{ .URL }}">
               {{ .Name }}
             </a>
           </li>
           {{ end }}
           {{ end }}
         </ul>
-
-        {{ if .Site.Params.GoogleSearch }}
-        <form id="cse-search-box-form-id2" class="d-flex search-bar d-block d-sm-none"
-          onsubmit="return executeQuery('xs');" role="search">
-          <input id="cse-search-input-box-id2" type="text" class="form-control" placeholder="Search">
-          <button class="btn" type="submit">
-            <i class="fa fa-search"></i>
-          </button>
-        </form>
-        {{ end }}
-
       </div>
     </nav>
   </div>
