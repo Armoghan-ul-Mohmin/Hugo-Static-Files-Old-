@@ -7,3 +7,6 @@ description: "A smalll optional description"
 math: true              # to enable showing equations (katex)
 mermaid: true           # to add diagrams using mermaid
 ---
+
+{{< toc >}}
+<br>
