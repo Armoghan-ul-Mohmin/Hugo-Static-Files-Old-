@@ -3,7 +3,7 @@ title:  Hugo (Static Site Generator)
 date: 2023-03-05
 tags: ["Hugo" , "Static Site Generator"]
 image: hugo-static-site.jpg
-description: "An Introduction to Artificial Intelligence (AI)"
+description: "An Introduction to Hugo Static site Generator"
 math: false              # to enable showing equations (katex)
 mermaid: false           # to add diagrams using mermaid
 tableOfContents:
