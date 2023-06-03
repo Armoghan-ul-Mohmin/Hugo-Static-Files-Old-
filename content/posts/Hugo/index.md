@@ -114,7 +114,7 @@ Before we dive into creating a static site with Hugo, let’s get familiar with 
 
 The Hugo CLI also has a variety of flags to specify additional options for some commands. To view a complete list of Hugo flags (there are a lot of them), we recommend using the ``hugo help`` command to display a list of all the available flags.
 
-## The Hugo Configuration File
+### The Hugo Configuration File
 
 Hugo’s configuration file supports three formats: ``YAML``,``TOML``, and ``JSON``. Likewise, the Hugo configuration file is **config.yml**, **config.toml**, or **config.json**, and you can find it in the root directory of a Hugo project.
 
